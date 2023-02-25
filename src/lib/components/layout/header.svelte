@@ -1,32 +1,34 @@
 <script lang="ts">
 	import TopAppBar, { Row, Section, Title, AutoAdjust } from '@smui/top-app-bar';
 	import IconButton from '@smui/icon-button';
+	import Button, { Label } from '@smui/button';
+
 	let topAppBar: TopAppBar;
 </script>
 
-<TopAppBar bind:this={topAppBar} variant="fixed" dense>
+<TopAppBar class="header" bind:this={topAppBar} variant="fixed">
 	<Row>
 		<Section>
 			<IconButton class="material-icons">menu</IconButton>
-			<Title>Fixed</Title>
+			<Title class="header__title">Cats on Maps</Title>
 		</Section>
 		<Section align="end" toolbar>
-			<IconButton class="material-icons" aria-label="Download">file_download</IconButton>
-			<IconButton class="material-icons" aria-label="Print this page">print</IconButton>
-			<IconButton class="material-icons" aria-label="Bookmark this page">bookmark</IconButton>
+			<Button href="/">
+				<Label>На главную</Label>
+			</Button>
+			<Button href="/map">
+				<Label>Карта</Label>
+			</Button>
+			<Button href="/list">
+				<Label>Список</Label>
+			</Button>
 		</Section>
 	</Row>
 </TopAppBar>
 <AutoAdjust {topAppBar} />
 
-<style>
-	/* Hide everything above this component. */
-	:global(#smui-app),
-	:global(body),
-	:global(html) {
-		display: block !important;
-		height: auto !important;
-		width: auto !important;
-		position: static !important;
+<style lang="scss">
+	.header__title {
+		text-transform: uppercase;
 	}
 </style>
