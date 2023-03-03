@@ -10,7 +10,7 @@
 	<Row>
 		<Section>
 			<IconButton class="material-icons">menu</IconButton>
-			<Title class="header__title">Cats on Maps</Title>
+			<Title>Cats on Maps</Title>
 		</Section>
 		<Section align="end" toolbar>
 			<Button href="/">
@@ -28,7 +28,4 @@
 <AutoAdjust {topAppBar} />
 
 <style lang="scss">
-	.header__title {
-		text-transform: uppercase;
-	}
 </style>
