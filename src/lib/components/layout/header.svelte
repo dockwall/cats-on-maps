@@ -13,13 +13,13 @@
 			<Title>Cats on Maps</Title>
 		</Section>
 		<Section align="end" toolbar>
-			<Button href="/">
+			<Button color="secondary" href="/">
 				<Label>На главную</Label>
 			</Button>
-			<Button href="/map">
+			<Button color="secondary" href="/map">
 				<Label>Карта</Label>
 			</Button>
-			<Button href="/list">
+			<Button color="secondary" href="/list">
 				<Label>Список</Label>
 			</Button>
 		</Section>
