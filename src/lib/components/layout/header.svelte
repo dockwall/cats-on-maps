@@ -3,28 +3,27 @@
 	import IconButton from '@smui/icon-button';
 	import Button, { Label } from '@smui/button';
 	let topAppBar: TopAppBar;
+
+	const headerTitle = 'Cats on Maps';
 </script>
 
-<TopAppBar class="header" bind:this={topAppBar} variant="fixed">
+<TopAppBar bind:this={topAppBar} variant="fixed">
 	<Row>
 		<Section>
 			<IconButton class="material-icons">menu</IconButton>
-			<Title>Cats on Maps</Title>
+			<Title>{headerTitle.toUpperCase()}</Title>
 		</Section>
 		<Section align="end" toolbar>
-			<Button color="secondary" href="/">
+			<Button href="/">
 				<Label>На главную</Label>
 			</Button>
-			<Button color="secondary" href="/map">
+			<Button href="/map">
 				<Label>Карта</Label>
 			</Button>
-			<Button color="secondary" href="/list">
+			<Button href="/list">
 				<Label>Список</Label>
 			</Button>
 		</Section>
 	</Row>
 </TopAppBar>
 <AutoAdjust {topAppBar} />
-
-<style lang="scss">
-</style>
