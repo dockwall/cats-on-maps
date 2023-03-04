@@ -1,6 +1,15 @@
-# create-svelte
+# cats-on-maps
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+
+## Preparing
+
+Use this script when cloning this repository, adding new SMUI components or updating SMUI themes:
+
+```bash
+# This script compiles min.css for SMUI
+npm run prepare
+```
 
 ## Creating a project
 
