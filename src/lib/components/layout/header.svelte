@@ -2,6 +2,9 @@
 	import TopAppBar, { Row, Section, Title, AutoAdjust } from '@smui/top-app-bar';
 	import IconButton from '@smui/icon-button';
 	import Button, { Label } from '@smui/button';
+
+	export let base: string;
+
 	let topAppBar: TopAppBar;
 
 	const headerTitle = 'Cats on Maps';
@@ -14,13 +17,13 @@
 			<Title>{headerTitle.toUpperCase()}</Title>
 		</Section>
 		<Section align="end" toolbar>
-			<Button href="/">
+			<Button href="{base}/">
 				<Label>На главную</Label>
 			</Button>
-			<Button href="/map">
+			<Button href="{base}/map">
 				<Label>Карта</Label>
 			</Button>
-			<Button href="/list">
+			<Button href="{base}/list">
 				<Label>Список</Label>
 			</Button>
 		</Section>
