@@ -131,7 +131,7 @@
 
 		&__statistics {
 			text-align: center;
-			padding-bottom: 100px;
+			padding-bottom: 50px;
 
 			&-title {
 				margin: 0 auto;
