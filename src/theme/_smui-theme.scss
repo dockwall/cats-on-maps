@@ -10,11 +10,12 @@
 	$error: color-palette.$red-900
 );
 
+@use '@material/typography/mdc-typography';
+
 html,
 body {
 	background-color: theme.$surface;
 	color: theme.$on-surface;
-	font-family: 'Roboto';
 }
 
 a {
