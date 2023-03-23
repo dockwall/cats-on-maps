@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import Card from '$lib/components/card.svelte';
 </script>
 
 <main class="mainpage">
@@ -25,14 +26,22 @@
 			</li>
 		</ul>
 	</div>
+	<div class="mainpage__statistics">
+		<h2 class="mdc-typography--headline2 mainpage__statistics-title">Проект в цифрах</h2>
+		<div class="mainpage__statistics-items">
+			<div class="mainpage__statistics-item"><Card /></div>
+			<div class="mainpage__statistics-item"><Card /></div>
+			<div class="mainpage__statistics-item"><Card /></div>
+		</div>
+	</div>
 </main>
 
 <style lang="scss">
 	.mainpage {
 		background: linear-gradient(180deg, rgba(0, 150, 136, 1) 0%, rgba(255, 193, 7, 1) 100%);
+		padding: 0 10%;
 		&__banner {
 			height: calc(100vh - 64px);
-			width: 80%;
 			margin: 0 auto;
 			box-sizing: border-box;
 			padding-top: 20vh;
@@ -55,18 +64,15 @@
 
 		&__info {
 			text-align: center;
-			height: 75vh;
-			background-color: transparent;
+			padding-bottom: 100px;
 
 			&-title {
-				width: 80%;
 				margin: 0 auto;
 				font-size: 60px;
 				color: white;
 			}
 
 			&-list {
-				width: 80%;
 				margin: 0 auto;
 				padding: 40px 10px;
 				margin-top: 50px;
@@ -88,6 +94,24 @@
 						margin-bottom: 40px;
 					}
 				}
+			}
+		}
+
+		&__statistics {
+			text-align: center;
+			padding-bottom: 100px;
+
+			&-title {
+				margin: 0 auto;
+				font-size: 60px;
+				color: white;
+			}
+
+			&-items {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				padding-top: 50px;
 			}
 		}
 	}
