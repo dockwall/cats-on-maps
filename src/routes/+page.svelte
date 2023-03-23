@@ -1,15 +1,17 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import Card from '$lib/components/card.svelte';
+	import StatisticsCard from '$lib/components/statistics-card.svelte';
 </script>
 
 <main class="mainpage">
 	<div class="mainpage__banner">
 		<h1 class="mdc-typography--headline1 mainpage__banner-title">Грустные и голодные коты</h1>
+
 		<p class="mdc-typography--headline2 mainpage__banner-subtitle">
 			ждут тебя во дворах вокруг &#128008;
 		</p>
 	</div>
+
 	<div class="mainpage__info">
 		<h2 class="mdc-typography--headline2 mainpage__info-title">
 			Cats on Maps — проект по социальному мониторингу бродячих кошек
@@ -17,21 +19,51 @@
 
 		<ul class="mainpage__info-list mdc-typography--subtitle1">
 			<li class="mainpage__info-list-item">Каждое животное описывается уникальной карточкой</li>
+
 			<li class="mainpage__info-list-item">
 				Карточки возможно просматривать в режиме <a href="{base}/list">списка</a>, либо
 				<a href="{base}/map">карты</a>
 			</li>
+
 			<li class="mainpage__info-list-item">
 				После авторизации можно создавать, редактировать и удалять свои карточки
 			</li>
 		</ul>
 	</div>
+
 	<div class="mainpage__statistics">
 		<h2 class="mdc-typography--headline2 mainpage__statistics-title">Проект в цифрах</h2>
+
 		<div class="mainpage__statistics-items">
-			<div class="mainpage__statistics-item"><Card /></div>
-			<div class="mainpage__statistics-item"><Card /></div>
-			<div class="mainpage__statistics-item"><Card /></div>
+			<div class="mainpage__statistics-item">
+				<StatisticsCard
+					statisticsValue={0}
+					statisticsDescription="Скоро здесь будет счетчик карточек!"
+					buttonsData={[
+						{
+							link: `${base}/map`,
+							label: 'Карта'
+						},
+						{
+							link: `${base}/list`,
+							label: 'Список'
+						}
+					]}
+				/>
+			</div>
+
+			<div class="mainpage__statistics-item">
+				<StatisticsCard
+					statisticsValue={0}
+					statisticsDescription="Скоро здесь будет счетчик пользователей!"
+					buttonsData={[
+						{
+							link: `${base}/`,
+							label: 'Вход / Регистрация'
+						}
+					]}
+				/>
+			</div>
 		</div>
 	</div>
 </main>
@@ -111,7 +143,16 @@
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
-				padding-top: 50px;
+				flex-wrap: wrap;
+				margin-top: 50px;
+			}
+
+			&-item {
+				margin: 0 auto;
+
+				&:not(:last-child) {
+					margin-bottom: 15px;
+				}
 			}
 		}
 	}
