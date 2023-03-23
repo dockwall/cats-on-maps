@@ -12,7 +12,7 @@
 	<Card variant="outlined">
 		<h3 class="mdc-typography--headline3 card__title">{statisticsValue}</h3>
 
-		<Content class="mdc-typography--body1">
+		<Content class="mdc-typography--body1" style="font-size: 20px;">
 			{statisticsDescription}
 		</Content>
 

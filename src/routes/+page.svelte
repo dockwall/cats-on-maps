@@ -108,10 +108,10 @@
 				margin: 0 auto;
 				padding: 40px 10px;
 				margin-top: 50px;
-				background: rgba(255, 255, 255, 0.4);
+				background: white;
 				box-sizing: border-box;
-				border-radius: 8px;
-				box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+				border: 1px solid #e0e0e0;
+				border-radius: 4px;
 
 				&-item {
 					font-size: 30px;
@@ -143,15 +143,16 @@
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
-				flex-wrap: wrap;
 				margin-top: 50px;
 			}
 
 			&-item {
-				margin: 0 auto;
+				margin: 0;
+				width: 100%;
+				max-width: 700px;
 
 				&:not(:last-child) {
-					margin-bottom: 15px;
+					margin-right: 20px;
 				}
 			}
 		}
